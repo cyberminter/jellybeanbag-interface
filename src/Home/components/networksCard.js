@@ -1,43 +1,39 @@
 import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
-
+import { switchNetwork } from "../../providers/AuthProvider";
 import { styled } from "@mui/system";
 
 const CardWrapper = styled(Card)({
   background: "#20242A",
+  margin: "1rem",
 });
 
-const Input = styled("input")(({ theme }) => ({
-  fontSize: 10,
-  fontWeight: 300,
-  padding: "10px 12px",
-  borderRadius: 0,
-  border: "1px solid #555",
-  background: "white",
-  width: "100%",
-  outline: "none",
-  color: theme.palette.primary.main,
-}));
 
-export default function ReferralLink({ address }) {
-  const link = `${window.origin}?ref=${address}`;
+
+
+
+
+
+export default function networksCard() {
 
   return (
     <CardWrapper>
       <CardContent style={{ paddingLeft: 8, paddingRight: 8 }}>
         <Typography gutterBottom variant="h5" textAlign="center">
-          Referral Link
+          Networks
         </Typography>
-        <Input value={address ? link : ""} readOnly />
         <Typography
           textAlign="center"
           variant="body2"
           marginTop={2}
           paddingX={3}
         >
-          Earn 12% of the <span className="chainCurrency">ETC</span> used to bake beans from anyone who uses your
-          referral link
+          <img alt="BNB" src="./media/logos/bnb.png" width="40" style={{  cursor: "pointer" }} onClick={() => switchNetwork(56)}/>
+          <img alt="AVAX" src="./media/logos/avax.png" width="40" style={{ margin: "1rem", cursor: "pointer" } }  onClick={() => switchNetwork(43114)}  />
+          <img alt="ETC" src="./media/logos/etc.png" width="40" style={{  cursor: "pointer" }}  onClick={() => switchNetwork(61)} />
+
+
         </Typography>
       </CardContent>
     </CardWrapper>

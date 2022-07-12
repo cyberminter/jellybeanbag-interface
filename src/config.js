@@ -36,7 +36,24 @@ export const chainIds = {
     
  }
  
- 
+  export const networklabelsNames = {
+
+    BSC: "BNB Smart Chain Mainnet",
+    AVAX: "Avalanche Mainnet C-Chain",
+    ETC: "Ethereum Classic Mainnet",
+    
+  }
+  
+  
+  export const networkNativeCurrency = {
+
+    BSC: { name: 'BNB', decimals: 18, symbol: 'BNB' },
+    AVAX: { name: 'AVAX', decimals: 18, symbol: 'AVAX' },
+    ETC: { name: 'ETC', decimals: 18, symbol: 'ETC' },
+    
+  }
+  
+  
  export const labelsNames = {
     ETH: "Ethereum",
     BSC: "BNB Chain",

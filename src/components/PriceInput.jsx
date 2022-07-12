@@ -37,7 +37,7 @@ export default function PriceInput({ value, max, onChange = () => {} }) {
         fontWeight={500}
         color="black"
       >
-        ETC
+        <span className="chainCurrency">ETC</span>
       </Typography>
     </Box>
   );

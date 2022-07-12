@@ -8,12 +8,12 @@
       "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "https://raw.githubusercontent.com/cyberminter/jellybeanswap-branding/main/brand/jellybeanbag/logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "https://raw.githubusercontent.com/cyberminter/jellybeanswap-branding/main/brand/jellybeanbag/logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }

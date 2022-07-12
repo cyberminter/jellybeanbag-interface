@@ -7,6 +7,10 @@ import ReferralLink from "./components/ReferralLink";
 import { useAuthContext } from "../providers/AuthProvider";
 import Footer from "./components/Footer";
 
+import NetworksCard from "./components/networksCard";
+
+
+
 const Wrapper = styled("div")(({ theme }) => ({
   maxWidth: 400,
   margin: "0 auto",
@@ -20,8 +24,15 @@ export default function Home() {
 
   return (
     <Wrapper>
+      
       <Connect />
+      
       <Header />
+      
+      <NetworksCard />
+
+
+      
       <BakeCard />
       <ReferralLink address={address} />
       <Footer />

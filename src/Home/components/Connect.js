@@ -28,6 +28,7 @@ export default function Connect({ responsive = true }) {
   const { address, loading, connect, disconnect } = useAuthContext();
 
   return responsive ? (
+    
     <ConnectButton
       color="secondary"
       variant="contained"

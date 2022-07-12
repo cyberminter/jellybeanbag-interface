@@ -2,8 +2,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 import Web3 from "web3";
 
 import abi from "../contracts/abi.json";
-import { useAuthContext } from "./AuthProvider";
-import { chainIds, contractAddress } from "../config";
+import { useAuthContext, getContractByChainID } from "./AuthProvider";
+import { chainIds } from "../config";
 
 export const ContractContext = createContext({
   contract: null,
@@ -24,7 +24,7 @@ export const ContractProvider = ({ children }) => {
     if (!chainId) {
       return;
     }
-    if (parseInt(chainId) !== chainIds.ETC) {
+    if (parseInt(chainId) !== chainIds.BSC && parseInt(chainId) !== chainIds.AVAX  && parseInt(chainId) !== chainIds.ETC) {
       setSnackbar({
         type: "error",
         message: "Wrong network",
@@ -37,7 +37,7 @@ export const ContractProvider = ({ children }) => {
     web3Instance.setProvider(Web3.givenProvider);
 
     setWeb3(web3Instance);
-    const contract = new web3Instance.eth.Contract(abi, contractAddress.ETC);
+    const contract = new web3Instance.eth.Contract(abi, getContractByChainID(parseInt(chainId)));
     setContract(contract);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chainId]);

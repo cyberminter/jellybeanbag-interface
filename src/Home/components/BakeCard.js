@@ -13,9 +13,8 @@ import Web3 from "web3";
 
 import PriceInput from "../../components/PriceInput";
 import { useContractContext } from "../../providers/ContractProvider";
-import { useAuthContext } from "../../providers/AuthProvider";
+import { useAuthContext, getContractByChainID } from "../../providers/AuthProvider";
 import { useEffect, useState } from "react";
-import { contractAddress } from "../../config";
 
 const CardWrapper = styled(Card)({
   background: "#20242A",
@@ -56,7 +55,7 @@ export default function BakeCard() {
       setContractBNB(0);
       return;
     }
-    getBnbBalance(contractAddress.ETC).then((amount) => {
+    getBnbBalance(getContractByChainID(parseInt(chainId))).then((amount) => {
       setContractBNB(fromWei(amount));
     });
   };
@@ -196,7 +195,7 @@ export default function BakeCard() {
           mt={3}
         >
           <Typography variant="body1">Contract</Typography>
-          <Typography variant="h5">{contractBNB} ETC</Typography>
+          <Typography variant="h5">{contractBNB} <span className="chainCurrency">ETC</span></Typography>
         </Grid>
         <Grid
           container
@@ -205,7 +204,7 @@ export default function BakeCard() {
           mt={3}
         >
           <Typography variant="body1">Wallet</Typography>
-          <Typography variant="h5">{walletBalance.bnb} ETC</Typography>
+          <Typography variant="h5">{walletBalance.bnb} <span className="chainCurrency">ETC</span></Typography>
         </Grid>
         <Grid
           container
@@ -260,7 +259,7 @@ export default function BakeCard() {
               Your Rewards
             </Typography>
             <Typography variant="h5" fontWeight="bolder">
-              {walletBalance.rewards} ETC
+              {walletBalance.rewards} <span className="chainCurrency">ETC</span>
             </Typography>
           </Grid>
           <ButtonContainer container>
@@ -283,7 +282,7 @@ export default function BakeCard() {
                 disabled={wrongNetwork || !address || loading}
                 onClick={eatBeans}
               >
-                EAT Jelly BEANS
+                Sell Jelly BEANS
               </Button>
             </Grid>
           </ButtonContainer>
