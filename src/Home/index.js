@@ -8,6 +8,8 @@ import { useAuthContext } from "../providers/AuthProvider";
 import Footer from "./components/Footer";
 
 import NetworksCard from "./components/networksCard";
+import  FAQ  from "./components/FAQ";
+import FAQModal from "./components/faqModal"
 
 
 
@@ -26,7 +28,8 @@ export default function Home() {
     <Wrapper>
       
       <Connect />
-      
+      <FAQ />
+    <FAQModal/>
       <Header />
       
       <NetworksCard />

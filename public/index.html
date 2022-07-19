@@ -26,7 +26,9 @@
       Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    -->   
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
   <title>Jelly Bean Bag | Reward Pool </title>
 </head>
 <body>
@@ -43,21 +45,54 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
-    <!-- warning message -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Welcome ( This  Message will not popup again )</h5>
+            <button type="button" class="close" data-dismiss="modal"  aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Welcome to jellybeanbag the Multi-chain reward pool/miner. Make sure to read the <a data-dismiss="modal" style="color: blue;text-decoration:underline;cursor: pointer;" data-toggle="modal" data-target="#exampleModal">FAQ</a> for more Infomation. Jellybeanbag allows users to pool their tokens (user's tokens are locked in the pool) and re-"mine" them or compound beans for more mining power. It is important to understand that beans could be seen as share of the pool. As long as the pool is growing and users are active the project will return coins. However like anything that is pegged no new coins are made. It is  a buying and selling  situation  all happening in one contract. Because of the communal  nature of this  project it is recommended to join the  <a href="https://t.me/jellybeancash" style="color: blue;text-decoration:underline;cursor: pointer;"> telegram server. </a>  Finally though many of us know this it is import to always remind people lose is possible in any crypto project no matter who tell you otherwise so spend your tokens based on what you can lose.  
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal"  class="btn btn-success">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script>
     
-    if(localStorage.getItem("showedWarning") == null) {
+    document.addEventListener("DOMContentLoaded", ()=>{
 
-      alert("Important: This is an experamental reward pool. Make sure you know what your doing. ");
-      localStorage.setItem("showedWarning", true);
 
-    
+      if(localStorage.getItem("popupmessage") == null) {
+
+
+        $(window).on('load', function() {
+          setTimeout(()=> $('#exampleModal2').modal('show'), 1000);
+ 
+    });
+    localStorage.setItem("popupmessage", true);
+
+
+      }
     
 
-    } 
+
+
+  
+    });
     
-    
-    </script>
+      
+      
+      </script>
 </body>
 
 </html>

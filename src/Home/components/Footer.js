@@ -13,12 +13,12 @@ export default function Footer() {
         </a>
       </Grid>
       <Grid item>
-        <a href="https://t.me/jellybeanswap"   target="__blank">
+        <a href="https://t.me/jellybeancash"   target="__blank">
           <img src={tgIcon} alt="telegram logo" width={48} height={48} />
         </a>
       </Grid>
       <Grid item>
-        <a href="https://twitter.com/jellybeanswap" target="__blank">
+        <a href="https://twitter.com/jellybeancash" target="__blank">
           <img src={twIcon} alt="twitter logo" width={48} height={48} />
         </a>
       </Grid>

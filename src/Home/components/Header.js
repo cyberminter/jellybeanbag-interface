@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import Connect from "./Connect";
-
+import  FAQ  from "./FAQ";
 
 
 const imgByChainID = (chainID) => {
@@ -48,6 +48,7 @@ export default function Header() {
    return (
     <Wrapper>
 
+      
       <img id="headerIMG"   src={imgByChainID(parseInt(isWindow())) }  alt="jelly bean logo" width={"40%"} style={{ marginTop: -48 }} />
 
       <br />
@@ -55,9 +56,12 @@ export default function Header() {
       <br />
       
       <Connect responsive={false} />
+      <FAQ responsive={false} />
+
       <Typography variant="h6" marginTop={-3}>
         The only <span className="chainCurrency">ETC</span> Reward Pool you will ever need!
       </Typography>
+      
     </Wrapper>
   );
 }

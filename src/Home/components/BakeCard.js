@@ -169,6 +169,8 @@ export default function BakeCard() {
     fetchContractBNBBalance();
     setLoading(false);
   };
+
+  
   const nutritionFacts = [
     {
       label: "Daily Return",
