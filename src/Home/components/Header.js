@@ -59,7 +59,7 @@ export default function Header() {
       <FAQ responsive={false} />
 
       <Typography variant="h6" marginTop={-3}>
-        The only <span className="chainCurrency">ETC</span> Reward Pool you will ever need!
+        The only JellyBean Reward Pool you will ever need!
       </Typography>
       
     </Wrapper>

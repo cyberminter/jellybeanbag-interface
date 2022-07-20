@@ -173,11 +173,11 @@ export default function BakeCard() {
   
   const nutritionFacts = [
     {
-      label: "Daily Return",
+      label: "Daily Bean Return",
       value: 8,
     },
     {
-      label: "APR",
+      label: "Bean APR",
       value: "2,920",
     },
     {
@@ -258,7 +258,7 @@ export default function BakeCard() {
             
           >
             <Typography variant="body1" fontWeight="bolder">
-              Your Rewards
+              Total beans value
             </Typography>
             <Typography variant="h5" fontWeight="bolder">
               {walletBalance.rewards} <span className="chainCurrency">ETC</span>
