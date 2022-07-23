@@ -18,7 +18,7 @@ export default function faqModal() {
             <div class="modal-body">
 
       <h2>Overall</h2>
-      <p>The buying, selling, and mining of jellybeans crates an interesting environment.</p>
+      <p>The buying, selling, and mining of jellybeans crates an interesting environment. It should be looked as a higher risk strategy where users grow there number of beans which can be sold for the native Currency which has been pooled. </p>
 
       <h2>0: can bean value go down</h2>
       <p>yes. Beans are pegged to BNB, AVAX, or ETC so if there is less native Currency in the contract then the value will go down.</p>
@@ -41,8 +41,6 @@ export default function faqModal() {
       <h2>  7: How to use jellybeanbag on my phone?  </h2>
       <p>You can either use an app with a dapp browser and choose the Metamask/Injected option or simply use any browser that you want and choose WalletConnect to connect to your wallet's app on your phone.</p>
 
-      <h2> 8: How do referrals work?  </h2>
-      <p>Once your BNB, AVAX, or ETC wallet is connected to the  Miner website, you will notice your referral address appear at the bottom of the page. When a new user hires miners after clicking your personal referral link, the contract will send a BNB value equal to 12% instantly to your beans. Be smart, use it to re-bag and build yourself a stream of income.</p>
 
 
 
